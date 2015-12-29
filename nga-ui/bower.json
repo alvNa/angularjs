@@ -1,0 +1,23 @@
+{
+  "name": "nga-ui",
+  "description": "Angular based architecture",
+  "main": "gulpfile.js",
+  "authors": [
+    "alvNa"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angularjs",
+    "javascript"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
