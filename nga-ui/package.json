@@ -1,0 +1,19 @@
+{
+  "name": "nga-ui",
+  "version": "1.0.0",
+  "description": "Angular based architecture",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alvNa/js/nga-ui"
+  },
+  "keywords": [
+    "angularjs",
+    "javascript"
+  ],
+  "author": "alvNa",
+  "license": "ISC"
+}
