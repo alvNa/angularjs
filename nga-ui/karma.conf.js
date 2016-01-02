@@ -21,15 +21,19 @@ module.exports = function(config) {
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
 
+      // inject:js
+
+      // endinject
+
       // our app
-      'src/js/**/module.js',
-      'src/js/**/!(module.js)*.js',
+      //'src/js/**/module.js',
+      //'src/js/**/!(module.js)*.js',
 
       // tests
-      'test/**/*.spec.js',
+      //'test/**/*.spec.js',
 
       // templates
-      'src/html/**/*.html'
+      //'src/html/**/*.html'
     ],
 
 
@@ -64,15 +68,36 @@ module.exports = function(config) {
       dir: 'build/reports/coverage',
       reporters: [
         // reporters not supporting the `file` property 
-        { type: 'html', subdir: 'report-html' },
-        { type: 'lcov', subdir: 'report-lcov' },
+        {
+          type: 'html',
+          subdir: 'report-html'
+        }, {
+          type: 'lcov',
+          subdir: 'report-lcov'
+        },
         // reporters supporting the `file` property, use `subdir` to directly 
         // output them in the `dir` directory 
-        { type: 'cobertura', subdir: '.', file: 'cobertura.txt' },
-        { type: 'lcovonly', subdir: '.', file: 'report-lcovonly.txt' },
-        { type: 'teamcity', subdir: '.', file: 'teamcity.txt' },
-        { type: 'text', subdir: '.', file: 'text.txt' },
-        { type: 'text-summary', subdir: '.', file: 'text-summary.txt' },
+        {
+          type: 'cobertura',
+          subdir: '.',
+          file: 'cobertura.txt'
+        }, {
+          type: 'lcovonly',
+          subdir: '.',
+          file: 'report-lcovonly.txt'
+        }, {
+          type: 'teamcity',
+          subdir: '.',
+          file: 'teamcity.txt'
+        }, {
+          type: 'text',
+          subdir: '.',
+          file: 'text.txt'
+        }, {
+          type: 'text-summary',
+          subdir: '.',
+          file: 'text-summary.txt'
+        },
       ]
     },
 

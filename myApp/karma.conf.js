@@ -21,15 +21,24 @@ module.exports = function(config) {
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       
+      // inject:js
+      'src/js/module/module.js',
+      'src/js/module/services/date-service.js',
+      'src/js/module/controllers/app-controller.js',
+      'src/js/module/run.js',
+      'src/js/module/constant.js',
+      'src/js/module/config.js'
+      // endinject
+      
       // our app
-      'src/js/**/module.js',
-      'src/js/**/!(module.js)*.js',
+      //'src/js/**/module.js',
+      //'src/js/**/!(module.js)*.js',
 
       // tests
-      'test/**/*.spec.js',
+      //'test/**/*.spec.js',
 
       // templates
-      'src/html/**/*.html'
+      //'src/html/**/*.html'
     ],
 
 

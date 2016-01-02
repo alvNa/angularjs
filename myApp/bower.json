@@ -1,5 +1,6 @@
 {
   "name": "myApp",
+  "version": "1.0.0-SNAPSHOT",
   "description": "Angular example app",
   "main": "gulpfile.js",
   "authors": [
