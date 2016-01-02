@@ -20,7 +20,7 @@ module.exports = function(config) {
       'bower_components/moment/moment.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
-
+      
       // our app
       'src/js/**/module.js',
       'src/js/**/!(module.js)*.js',

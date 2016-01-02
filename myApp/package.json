@@ -1,7 +1,7 @@
 {
-  "name": "nga-ui",
+  "name": "myApp",
   "version": "1.0.0",
-  "description": "Angular based architecture",
+  "description": "Angular example app",
   "main": "gulpfile.js",
   "scripts": {
     "test": "gulp test",
