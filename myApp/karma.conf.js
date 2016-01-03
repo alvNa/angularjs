@@ -18,6 +18,7 @@ module.exports = function(config) {
       // bower:js
       'bower_components/angular/angular.js',
       'bower_components/moment/moment.js',
+      'bower_components/nga-ui/build/dist/nga-ui.min.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       
@@ -27,7 +28,7 @@ module.exports = function(config) {
       'src/js/module/controllers/app-controller.js',
       'src/js/module/run.js',
       'src/js/module/constant.js',
-      'src/js/module/config.js'
+      'src/js/module/config.js',
       // endinject
       
       // our app
@@ -35,7 +36,7 @@ module.exports = function(config) {
       //'src/js/**/!(module.js)*.js',
 
       // tests
-      //'test/**/*.spec.js',
+      'test/**/*.spec.js'
 
       // templates
       //'src/html/**/*.html'

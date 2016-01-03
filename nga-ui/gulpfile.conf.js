@@ -1,7 +1,10 @@
+'use strict';
+
 var tsjsmapjsSuffix = '.{ts,js.map,js}';
 
 var bower = 'bower_components/';
 var src = 'src/';
+var packageJson = require('./package.json');
 
 var config = {
     src: src, 
@@ -12,6 +15,8 @@ var config = {
     css: 'css',
     karmaConf: 'karma.conf.js',
     baseDir: __dirname,
+    dist: 'build/dist',
+    appName: packageJson.name,
 
     bootFile: src + 'index.html',
     bootjQuery: bower + 'jquery/dist/jquery.min.js',

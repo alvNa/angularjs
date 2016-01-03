@@ -8,8 +8,9 @@ require('mod-build')(gulp,config);
 require('mod-server')(gulp,config);
 require('mod-test')(gulp,config);
 
-gulp.task('test', ['pre-test','karma-run']);
-gulp.task('ci', ['pre-test','karma-single-run']);
-gulp.task('serve', ['inject', 'browser-sync']);
+gulp.task('test', ['inject-test','karma-run']);
+gulp.task('ci', ['inject-test','karma-single-run']);
+gulp.task('serve', ['inject-src', 'browser-sync']);
+gulp.task('dist', ['uglify-js']);
 
-gulp.task('default', ['ci','inject']);
+gulp.task('default', ['ci','inject-src']);

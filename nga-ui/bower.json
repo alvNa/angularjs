@@ -2,7 +2,9 @@
   "name": "nga-ui",
   "description": "Angular based architecture",
   "version": "1.0.0-SNAPSHOT",
-  "main": "gulpfile.js",
+  "main": [
+    "build/dist/nga-ui.min.js"
+  ],
   "authors": [
     "alvNa"
   ],

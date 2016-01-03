@@ -22,7 +22,8 @@ module.exports = function(config) {
       // endbower
 
       // inject:js
-
+      'src/js/core/module.js',
+      'src/js/core/services/date-service.js',
       // endinject
 
       // our app
@@ -30,7 +31,7 @@ module.exports = function(config) {
       //'src/js/**/!(module.js)*.js',
 
       // tests
-      //'test/**/*.spec.js',
+      'test/**/*.spec.js'
 
       // templates
       //'src/html/**/*.html'

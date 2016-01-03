@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('myApp')
-    .factory('dateService', [
+    .factory('dateService2', [
       '$http', '$q',
       function($http, $q) {
 
