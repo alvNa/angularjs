@@ -7,9 +7,10 @@
         <!--
         <link rel="shortcut icon" href="src/assets/images/favicon.ico">
         -->
-        <title>ABC</title>
+        <title>My App</title>
 
         <!-- bower:css -->
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
         <!-- endbower -->
 
         <!-- inject:css -->
@@ -17,32 +18,29 @@
         <!-- endinject -->
     </head>
     <!---->
-    <body ng-controller="AppController as vm">
-        {{1+1}}
-        <button ng-click="getDate()">DATE</button>
-        {{date}}
+    <body >
+        <!-- main content -->
         <div ui-view></div>
-
+       
         <!-- bower:js -->
         <script src="../bower_components/angular/angular.js"></script>
         <script src="../bower_components/moment/moment.js"></script>
+        <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../bower_components/angular-animate/angular-animate.js"></script>
         <script src="../bower_components/nga-ui/build/dist/nga-ui.min.js"></script>
+        <script src="../bower_components/nga-ui/build/dist/nga-ui-templates.min.js"></script>
         <!-- endbower -->
 
         <!-- inject:js -->
-       
         <script src="js/module/module.js"></script>
-       
         <script src="js/module/services/date-service.js"></script>
-       
         <script src="js/module/controllers/app-controller.js"></script>
-       
         <script src="js/module/run.js"></script>
-       
         <script src="js/module/constant.js"></script>
-       
         <script src="js/module/config.js"></script>
-       
         <!-- endinject -->
     </body>
 </html>

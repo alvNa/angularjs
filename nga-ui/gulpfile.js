@@ -10,6 +10,6 @@ require('mod-test')(gulp,config);
 
 gulp.task('test', ['inject-test','karma-run']);
 gulp.task('ci', ['inject-test','karma-single-run']);
-gulp.task('dist', ['uglify-js']);
+gulp.task('dist', ['uglify-js','ng-template-cache']);
 
 gulp.task('default', ['ci']);

@@ -17,6 +17,7 @@ var config = {
     baseDir: __dirname,
     dist: 'build/dist',
     appName: packageJson.name,
+    modulePrefix: 'nga',
 
     bootFile: src + 'index.html',
     bootjQuery: bower + 'jquery/dist/jquery.min.js',

@@ -3,7 +3,8 @@
   "description": "Angular based architecture",
   "version": "1.0.0-SNAPSHOT",
   "main": [
-    "build/dist/nga-ui.min.js"
+    "build/dist/nga-ui.min.js",
+    "build/dist/nga-ui-templates.min.js" 
   ],
   "authors": [
     "alvNa"
@@ -25,7 +26,11 @@
   ],
   "dependencies": {
     "angular": "angularjs#~1.4.8",
-    "moment": "~2.10.6"
+    "moment": "~2.10.6",
+    "angular-ui-router": "~0.2.15",
+    "angular-bootstrap": "~0.14.3",
+    "bootstrap": "~3.3.6",
+    "angular-animate": "~1.4.8"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.8"

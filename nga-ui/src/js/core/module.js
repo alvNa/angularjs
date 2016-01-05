@@ -1,4 +1,10 @@
 (function() {
     'use strict';
-    angular.module('nga.core', []);
+    //Initialise templates module
+    angular.module('nga.templates', []);
+
+    angular.module('nga.core', [
+      'nga.templates',
+      'ui.router'
+    ]);
 }());
