@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('myApp')
-    .controller('AppController', ['$scope', 'dateService',
+    .controller('ContactsController', ['$scope', 'dateService',
       function($scope, dateService) {
 
         $scope.phones = [{
@@ -18,7 +18,7 @@
 
         $scope.getDate = function() {
           dateService.getCurrentDate().then(function(data) {
-            $scope.date = data;
+            $scope.date = data.format('LLLL');;
           });
         }
       }

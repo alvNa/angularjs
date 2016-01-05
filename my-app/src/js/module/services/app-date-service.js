@@ -2,14 +2,14 @@
   'use strict';
 
   angular.module('myApp')
-    .factory('dateService2', [
+    .factory('appDateService', [
       '$http', '$q',
       function($http, $q) {
 
         return {
           getCurrentDate: function() {
             return $q(function(resolve){
-              resolve(moment());
+              resolve(moment().subtract(20, 'year'));
             });
           }
         };
