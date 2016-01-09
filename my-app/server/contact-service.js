@@ -10,7 +10,7 @@ module.exports = function(app) {
         name: 'Vincent Vega'
       }, {
         id: 2,
-        name: 'Jules Winnfield'
+        name: 'Jules Winnfield fistro'
       }];
       res.json(result);
     });

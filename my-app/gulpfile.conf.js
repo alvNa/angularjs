@@ -11,6 +11,8 @@ var config = {
     bowerDir: __dirname + '/bower_components',
     src: src,
     srcDir: __dirname + '/src',
+    server: 'server',
+    serverDir: __dirname + '/server',
 
     debug: 'debug',
     release: 'release',
@@ -19,7 +21,6 @@ var config = {
     dist: 'build/dist',
     appName: packageJson.name,
     modulePrefix: 'my-app',
-    server: 'server',
     port: 9000,
 
     bootFile: src + 'index.html'
