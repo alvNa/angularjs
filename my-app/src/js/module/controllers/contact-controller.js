@@ -2,20 +2,30 @@
   'use strict';
 
   angular.module('myApp')
-    .controller('ContactController', ['$scope', 'dateService','contactService',
-      function($scope, dateService, contactService) {
+    .controller('ContactController', ContactController);
 
-        $scope.getDate = function() {
-          dateService.getCurrentDate().then(function(data) {
-            $scope.date = data.format('LLLL');
-          });
-        }
+  ContactController.$inject = ['dateService', 'contactService'];
 
-        $scope.findContacts = function() {
-          contactService.find().then(function(res) {
-            $scope.contacts = res.data;
-          });
-        }
-      }
-    ]);
+  /* @ngInject */
+  function ContactController(dateService, contactService) {
+    /* jshint validthis: true */
+    var vm = this;
+
+    vm.date;
+    vm.contacts;
+    vm.getDate = getDate;
+    vm.findContacts= findContacts;
+
+    function getDate() {
+      dateService.getCurrentDate().then(function(data) {
+        vm.date = data.format('LLLL');
+      });
+    }
+
+    function findContacts() {
+      contactService.find().then(function(res) {
+        vm.contacts = res.data;
+      });
+    }
+  }
 }());

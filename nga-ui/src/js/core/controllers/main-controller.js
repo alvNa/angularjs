@@ -2,9 +2,12 @@
   'use strict';
 
   angular.module('nga.core')
-    .controller('MainController', ['$scope',
-      function($scope) {
+    .controller('MainController', MainController);
 
-      }
-    ]);
+  MainController.$inject = [];
+
+  /* @ngInject */
+  function MainController() {
+
+  }
 }());

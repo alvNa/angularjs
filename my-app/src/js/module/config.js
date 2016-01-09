@@ -1,26 +1,31 @@
 (function() {
   'use strict';
+
   angular.module('myApp')
-    .config([
-      '$stateProvider', '$urlRouterProvider',
-      function($stateProvider, $urlRouterProvider) {
+    .config(config);
 
-        $urlRouterProvider.otherwise('/');
+  config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-        $stateProvider
-          .state('home', {
-            url: '/',
-            templateUrl: 'html/home.html',
-            controller: 'MainController'
-          })
-          .state('home.contacts', {
-            url: 'contacts',
-            templateUrl: 'html/contacts.html'
-          })
-          .state('home.about', {
-            url: 'about',
-            templateUrl: 'html/about.html'
-          });
-      }
-    ]);
+  /* @ngInject */
+  function config($stateProvider, $urlRouterProvider) {
+
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider
+      .state('home', {
+        url: '/',
+        templateUrl: 'html/home.html',
+        controller: 'MainController',
+        controllerAs: 'vm'
+      })
+      .state('home.contacts', {
+        url: 'contacts',
+        templateUrl: 'html/contacts.html'
+      })
+      .state('home.about', {
+        url: 'about',
+        templateUrl: 'html/about.html'
+      });
+  }
+
 }());

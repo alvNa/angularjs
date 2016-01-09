@@ -2,15 +2,17 @@
   'use strict';
 
   angular.module('myApp')
-    .factory('contactService', [
-      '$http', '$q',
-      function($http, $q) {
+    .factory('contactService', contactService);
 
-        return {
-          find: function() {
-            return $http.get('/my-app/contact');
-          }
-        };
+  contactService.$inject = ['$http', '$q'];
+
+  /* @ngInject */
+  function contactService($http, $q) {
+    return {
+      find: function() {
+        return $http.get('/my-app/contact');
       }
-    ]);
+    };
+  }
+
 }());

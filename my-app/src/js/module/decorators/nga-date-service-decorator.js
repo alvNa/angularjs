@@ -2,12 +2,14 @@
   'use strict';
 
   angular.module('myApp').decorator(
-    'dateService', ['$delegate', 'appDateService',
+    'dateService', dateServiceDocorator);
 
-      function dateServiceDocorator($delegate, appDateService) {
-        $delegate.getCurrentDate = appDateService.getCurrentDate;
-        // Return the decorated service.
-        return $delegate;
-      }
-    ]);
+  dateServiceDocorator.$inject = ['$delegate', 'appDateService'];
+
+  /* @ngInject */
+  function dateServiceDocorator($delegate, appDateService) {
+    $delegate.getCurrentDate = appDateService.getCurrentDate;
+    // Return the decorated service.
+    return $delegate;
+  }
 }());

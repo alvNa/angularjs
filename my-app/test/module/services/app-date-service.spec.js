@@ -28,16 +28,14 @@
 
       jasmine.clock().mockDate(baseTime.toDate());
 
-      appDateService.getCurrentDate().then(function(res){
+      appDateService.getCurrentDate().then(function(res) {
         result = res;
       });
-      
+
       $scope.$apply();
-      jasmine.clock().tick(50);
+      //jasmine.clock().tick(50);
 
       expect(result.add(20, 'year').valueOf()).toEqual(baseTime.valueOf());
-
-      //expect(result).toBe(true);
     });
 
   });

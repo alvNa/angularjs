@@ -2,17 +2,20 @@
   'use strict';
 
   angular.module('nga.core')
-    .factory('dateService', [
-      '$http', '$q',
-      function($http, $q) {
+    .factory('dateService', dateService);
 
-        return {
-          getCurrentDate: function() {
-            return $q(function(resolve){
-              resolve(moment());
-            });
-          }
-        };
+  dateService.$inject = ['$http', '$q'];
+
+  /* @ngInject */
+  function dateService($http, $q) {
+
+    return {
+      getCurrentDate: function() {
+        return $q(function(resolve) {
+          resolve(moment());
+        });
       }
-    ]);
+    };
+  }
+
 }());

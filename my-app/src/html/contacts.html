@@ -1,7 +1,7 @@
-<div ng-controller="ContactsController">
+<div ng-controller="ContactController as vm">
   <h1>My Contacts</h1>
-  <button ng-click="getDate()">Show Date</button>
-  <h4>{{date | date : 'shortDate'}}</h4>
-  <button ng-click="findContacts()">Show Contacts yo!</button>
-  <p>{{contacts}}</p>
+  <button ng-click="vm.getDate()">Show Date</button>
+  <h4>{{vm.date | date : 'shortDate'}}</h4>
+  <button ng-click="vm.findContacts()">Show Contacts yo!</button>
+  <p>{{vm.contacts}}</p>
 </div>

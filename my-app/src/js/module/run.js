@@ -1,7 +1,13 @@
 (function() {
   'use strict';
   angular.module('myApp')
-    .run(['$state', function($state) {
-      //$state.transitionTo('home');
-    }]);
+    .run(run);
+
+  run.$inject = ['$state'];
+
+  /* @ngInject */
+  function run($state) {
+    //$state.transitionTo('home');
+  }
+
 }());
