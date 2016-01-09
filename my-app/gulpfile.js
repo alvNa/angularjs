@@ -10,7 +10,7 @@ require('mod-test')(gulp,config);
 
 gulp.task('test', ['inject-test','karma-run']);
 gulp.task('ci', ['inject-test','karma-single-run']);
-gulp.task('serve', ['inject-src', 'browser-sync']);
+gulp.task('serve', ['inject-src', 'server-run']);
 gulp.task('dist', ['uglify-js']);
 
 gulp.task('default', ['ci','inject-src']);

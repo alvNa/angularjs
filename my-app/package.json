@@ -18,6 +18,8 @@
   "author": "alvNa",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.11.0",
+    "express": "^4.13.3",
     "gulp": "^3.9.0"
   }
 }

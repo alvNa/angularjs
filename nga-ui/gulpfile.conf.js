@@ -18,6 +18,8 @@ var config = {
     dist: 'build/dist',
     appName: packageJson.name,
     modulePrefix: 'nga',
+    server: 'server',
+    port: 9000,
 
     bootFile: src + 'index.html',
     bootjQuery: bower + 'jquery/dist/jquery.min.js',
