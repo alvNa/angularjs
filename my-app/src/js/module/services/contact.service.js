@@ -4,13 +4,13 @@
   angular.module('myApp')
     .factory('contactService', contactService);
 
-  contactService.$inject = ['$http', '$q'];
+  contactService.$inject = ['$http', '$q', 'URI'];
 
   /* @ngInject */
-  function contactService($http, $q) {
+  function contactService($http, $q, URI) {
     return {
       find: function() {
-        return $http.get('/my-app/contact');
+        return $http.get(URI.CONTACT_LIST);
       }
     };
   }

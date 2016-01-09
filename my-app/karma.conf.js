@@ -29,14 +29,14 @@ module.exports = function(config) {
       // endbower
       
       // inject:js
-      'src/js/module/module.js',
-      'src/js/module/services/contact-service.js',
-      'src/js/module/services/app-date-service.js',
-      'src/js/module/decorators/nga-date-service-decorator.js',
-      'src/js/module/controllers/contact-controller.js',
-      'src/js/module/run.js',
-      'src/js/module/constant.js',
-      'src/js/module/config.js',
+      'src/js/module/my-app.module.js',
+      'src/js/module/services/contact.service.js',
+      'src/js/module/services/app-date.service.js',
+      'src/js/module/decorators/nga-date-service.decorator.js',
+      'src/js/module/controllers/contact.controller.js',
+      'src/js/module/my-app.run.js',
+      'src/js/module/my-app.constant.js',
+      'src/js/module/my-app.config.js',
       // endinject
       
       // our app
@@ -55,7 +55,7 @@ module.exports = function(config) {
     exclude: [
       '**/*.svn',
       '**/*.git',
-      'src/js/module/config.js'
+      'src/js/**/*.config.js'
     ],
 
 

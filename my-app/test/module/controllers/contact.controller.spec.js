@@ -2,7 +2,7 @@
   'use strict';
 
   describe('ContactController', function() {
-    var $scope;
+    var ContactController, $scope;
     var isSuccessCallBack = true;
     var currentDate = moment();
     var contacts = [{
@@ -49,7 +49,7 @@
     beforeEach(inject(function($rootScope, $controller) {
       $scope = $rootScope.$new();
 
-      $controller('ContactController', {
+      ContactController = $controller('ContactController', {
         $scope: $scope,
         dateService: dateService,
         contactService: contactService
@@ -57,21 +57,21 @@
     }));
 
     it('should invoke method getDate', function() {
-      $scope.getDate();
+      ContactController.getDate();
 
       $scope.$apply();
 
       expect(dateService.getCurrentDate).toHaveBeenCalled();
-      expect($scope.date.valueOf()).toEqual(currentDate.format('LLLL').valueOf());
+      expect(ContactController.date.valueOf()).toEqual(currentDate.format('LLLL').valueOf());
     });
 
     it('should invoke method findContacts', function() {
-      $scope.findContacts();
+      ContactController.findContacts();
 
       $scope.$apply();
 
       expect(contactService.find).toHaveBeenCalled();
-      expect($scope.contacts).toEqual(contacts);
+      expect(ContactController.contacts).toEqual(contacts);
     });
   });
 }());

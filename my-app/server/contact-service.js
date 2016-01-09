@@ -2,7 +2,7 @@
 
 module.exports = function(app) {
 
-  app.route('/my-app/contact')
+  app.route('/my-app/contacts')
     //Find contacts
     .get(function(req, res) {
       var result = [{
