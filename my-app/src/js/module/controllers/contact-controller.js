@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('myApp')
-    .controller('ContactsController', ['$scope', 'dateService','contactService',
+    .controller('ContactController', ['$scope', 'dateService','contactService',
       function($scope, dateService, contactService) {
 
         $scope.getDate = function() {
@@ -11,7 +11,7 @@
           });
         }
 
-        $scope.getContacts = function() {
+        $scope.findContacts = function() {
           contactService.find().then(function(res) {
             $scope.contacts = res.data;
           });

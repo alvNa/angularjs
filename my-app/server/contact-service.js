@@ -3,14 +3,14 @@
 module.exports = function(app) {
 
   app.route('/my-app/contact')
-    //Find Orders
+    //Find contacts
     .get(function(req, res) {
       var result = [{
         id: 1,
         name: 'Vincent Vega'
       }, {
         id: 2,
-        name: 'Jules Winnfield fistro'
+        name: 'Jules Winnfield'
       }];
       res.json(result);
     });

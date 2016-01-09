@@ -18,14 +18,22 @@ module.exports = function(config) {
       // bower:js
       'bower_components/angular/angular.js',
       'bower_components/moment/moment.js',
+      'bower_components/angular-ui-router/release/angular-ui-router.js',
+      'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+      'bower_components/jquery/dist/jquery.js',
+      'bower_components/bootstrap/dist/js/bootstrap.min.js',
+      'bower_components/angular-animate/angular-animate.js',
       'bower_components/nga-ui/build/dist/nga-ui.min.js',
+      'bower_components/nga-ui/build/dist/nga-ui-templates.min.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       
       // inject:js
       'src/js/module/module.js',
-      'src/js/module/services/date-service.js',
-      'src/js/module/controllers/app-controller.js',
+      'src/js/module/services/contact-service.js',
+      'src/js/module/services/app-date-service.js',
+      'src/js/module/decorators/nga-date-service-decorator.js',
+      'src/js/module/controllers/contact-controller.js',
       'src/js/module/run.js',
       'src/js/module/constant.js',
       'src/js/module/config.js',
@@ -46,7 +54,8 @@ module.exports = function(config) {
     // list of files to exclude
     exclude: [
       '**/*.svn',
-      '**/*.git'
+      '**/*.git',
+      'src/js/module/config.js'
     ],
 
 
