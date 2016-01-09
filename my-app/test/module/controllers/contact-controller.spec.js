@@ -2,7 +2,7 @@
   'use strict';
 
   describe('ContactController', function() {
-    var elm, element, $scope, ContactController;
+    var $scope;
     var isSuccessCallBack = true;
     var currentDate = moment();
     var contacts = [{
@@ -46,15 +46,14 @@
 
     beforeEach(module('myApp'));
 
-    beforeEach(inject(function($rootScope, $controller, _$httpBackend_) {
+    beforeEach(inject(function($rootScope, $controller) {
       $scope = $rootScope.$new();
 
-      ContactController = $controller('ContactController', {
+      $controller('ContactController', {
         $scope: $scope,
         dateService: dateService,
         contactService: contactService
       });
-      $httpBackend = _$httpBackend_;
     }));
 
     it('should invoke method getDate', function() {
