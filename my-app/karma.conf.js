@@ -25,11 +25,13 @@ module.exports = function(config) {
       'bower_components/angular-animate/angular-animate.js',
       'bower_components/nga-ui/build/dist/nga-ui.min.js',
       'bower_components/nga-ui/build/dist/nga-ui-templates.min.js',
+      'bower_components/angular-resource/angular-resource.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       
       // inject:js
       'src/js/module/my-app.module.js',
+      'src/js/module/services/item.service.js',
       'src/js/module/services/contact.service.js',
       'src/js/module/services/app-date.service.js',
       'src/js/module/decorators/nga-date-service.decorator.js',

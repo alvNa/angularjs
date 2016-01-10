@@ -3,28 +3,34 @@ var _ = require('lodash');
 
 module.exports = function(app) {
 
-  var contacts = [{
+  var items = [{
     id: 1,
-    name: 'Vincent Vega'
+    name: 'Coca-cola'
   }, {
     id: 2,
-    name: 'Jules Winnfield'
+    name: 'Pepsi-cola'
+  }, {
+    id: 3,
+    name: 'Aquarius'
   }];
 
-  app.route('/api/contacts')
-    //Find contacts
+  app.route('/api/items')
+    //Find items
     .get(function(req, res) {
-      res.json(contacts);
+      res.json(items);
     });
 
-  app.route('/api/contacts/:id')
+  app.route('/api/items/:id')
     .get(function(req, res) {
+      
+      console.log('items');
+
       if (req.params.id < 0) {
         res.statusCode = 404;
         res.send('Error 404: No contact found');
       } else {
-        res.json(_.find(contacts, function(contact) {
-          return contact.id.toString() === req.params.id;
+        res.json(_.find(items, function(item) {
+          return item.id.toString() === req.params.id;
         }));
       }
     })
@@ -33,8 +39,8 @@ module.exports = function(app) {
         res.statusCode = 404;
         res.send('Error 404: No order found');
       } else {
-        _.find(contacts, function(contact) {
-          return contact.id.toString() === req.params.id;
+        _.find(items, function(item) {
+          return item.id.toString() === req.params.id;
         }) = req.body;
 
         res.status(200).end();
@@ -45,8 +51,8 @@ module.exports = function(app) {
         res.statusCode = 404;
         res.send('Error 404: No order found');
       } else {
-        _.remove(contacts, function(contact) {
-          return contact.id.toString() === req.params.id;
+        _.remove(items, function(item) {
+          return item.id.toString() === req.params.id;
         });
 
         res.status(200).end();
