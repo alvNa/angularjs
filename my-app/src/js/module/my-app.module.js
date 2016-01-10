@@ -1,4 +1,4 @@
 (function() {
     'use strict';
-    angular.module('myApp', ['nga.core','ngResource']);
+    angular.module('myApp', ['nga.core']);
 }());

@@ -22,9 +22,6 @@ module.exports = function(app) {
 
   app.route('/api/items/:id')
     .get(function(req, res) {
-      
-      console.log('items');
-
       if (req.params.id < 0) {
         res.statusCode = 404;
         res.send('Error 404: No contact found');

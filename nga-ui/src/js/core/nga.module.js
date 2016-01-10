@@ -5,6 +5,7 @@
 
     angular.module('nga.core', [
       'nga.templates',
-      'ui.router'
+      'ui.router',
+      'ngResource'
     ]);
 }());
