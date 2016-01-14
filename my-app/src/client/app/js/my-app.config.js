@@ -8,7 +8,7 @@
 
   /* @ngInject */
   function config($stateProvider, $urlRouterProvider) {
-
+   
     $urlRouterProvider.otherwise('/');
 
     $stateProvider

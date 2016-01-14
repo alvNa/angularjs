@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp"> 
+   <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--
+        <link rel="shortcut icon" href="src/assets/images/favicon.ico">
+        -->
+        <title>My App</title>
+
+        <!-- bower:css -->
+        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <!-- endbower -->
+
+        <!-- inject:css -->
+        <!-- this is done with gulp inject which works as expected -->
+        <!-- endinject -->
+    </head>
+    <!---->
+    <body >
+        <!-- main content -->
+        <div ui-view></div>
+       
+        <!-- bower:js -->
+        <script src="../../bower_components/angular/angular.js"></script>
+        <script src="../../bower_components/moment/moment.js"></script>
+        <script src="../../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="../../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="../../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../bower_components/angular-animate/angular-animate.js"></script>
+        <script src="../../bower_components/angular-resource/angular-resource.js"></script>
+        <script src="../../bower_components/nga-ui/build/dist/nga-ui.min.js"></script>
+        <script src="../../bower_components/nga-ui/build/dist/nga-ui-templates.min.js"></script>
+        <!-- endbower -->
+
+        <!-- inject:js -->
+        <script src="js/my-app.module.js"></script>
+        <script src="js/services/item.service.js"></script>
+        <script src="js/services/contact.service.js"></script>
+        <script src="js/services/app-date.service.js"></script>
+        <script src="js/decorators/nga-date-service.decorator.js"></script>
+        <script src="js/controllers/contact.controller.js"></script>
+        <script src="js/my-app.run.js"></script>
+        <script src="js/my-app.constant.js"></script>
+        <script src="js/my-app.config.js"></script>
+        <!-- endinject -->
+    </body>
+</html>

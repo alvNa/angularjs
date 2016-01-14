@@ -5,7 +5,7 @@ module.exports = function(app) {
 
   var contacts = [{
     id: 1,
-    name: 'Vincent Vega'
+    name: 'Vincent Vega2'
   }, {
     id: 2,
     name: 'Jules Winnfield'

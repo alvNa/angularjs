@@ -7,7 +7,7 @@
 
   /* @ngInject */
   function run($state) {
-    //$state.transitionTo('home');
+    //$state.transitionTo('home');  
   }
 
 }());

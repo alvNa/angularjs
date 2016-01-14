@@ -23,22 +23,22 @@ module.exports = function(config) {
       'bower_components/jquery/dist/jquery.js',
       'bower_components/bootstrap/dist/js/bootstrap.min.js',
       'bower_components/angular-animate/angular-animate.js',
+      'bower_components/angular-resource/angular-resource.js',
       'bower_components/nga-ui/build/dist/nga-ui.min.js',
       'bower_components/nga-ui/build/dist/nga-ui-templates.min.js',
-      'bower_components/angular-resource/angular-resource.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       
       // inject:js
-      'src/js/module/my-app.module.js',
-      'src/js/module/services/item.service.js',
-      'src/js/module/services/contact.service.js',
-      'src/js/module/services/app-date.service.js',
-      'src/js/module/decorators/nga-date-service.decorator.js',
-      'src/js/module/controllers/contact.controller.js',
-      'src/js/module/my-app.run.js',
-      'src/js/module/my-app.constant.js',
-      'src/js/module/my-app.config.js',
+      'src/client/app/js/my-app.module.js',
+      'src/client/app/js/services/item.service.js',
+      'src/client/app/js/services/contact.service.js',
+      'src/client/app/js/services/app-date.service.js',
+      'src/client/app/js/decorators/nga-date-service.decorator.js',
+      'src/client/app/js/controllers/contact.controller.js',
+      'src/client/app/js/my-app.run.js',
+      'src/client/app/js/my-app.constant.js',
+      'src/client/app/js/my-app.config.js',
       // endinject
       
       // our app
@@ -46,7 +46,7 @@ module.exports = function(config) {
       //'src/js/**/!(module.js)*.js',
 
       // tests
-      'test/**/*.spec.js'
+      'src/client/test/**/*.spec.js'
 
       // templates
       //'src/html/**/*.html'
@@ -57,7 +57,7 @@ module.exports = function(config) {
     exclude: [
       '**/*.svn',
       '**/*.git',
-      'src/js/**/*.config.js'
+      'src/client/app/js/**/*.config.js'
     ],
 
 
@@ -67,8 +67,8 @@ module.exports = function(config) {
       // source files, that you wanna generate coverage for 
       // do not include tests or libraries 
       // (these files will be instrumented by Istanbul) 
-      'src/**/*.js': ['coverage'],
-      'src/html/**/*.html': 'ng-html2js'
+      'src/client/app/**/*.js': ['coverage'],
+      'src/client/app/html/**/*.html': 'ng-html2js'
     },
 
 

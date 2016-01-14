@@ -1,6 +1,6 @@
 'use strict';
 
-var src = 'src/';
+var src = 'src/client/app/';
 var packageJson = require('./package.json');
 
 var config = {
@@ -10,9 +10,9 @@ var config = {
     bower: '/bower_components',
     bowerDir: __dirname + '/bower_components',
     src: src,
-    srcDir: __dirname + '/src',
-    server: 'server',
-    serverDir: __dirname + '/server',
+    srcDir: __dirname + '/' + src,
+    server: 'src/server',
+    serverDir: __dirname + '/src/server',
 
     debug: 'debug',
     release: 'release',
@@ -23,7 +23,7 @@ var config = {
     modulePrefix: 'my-app',
     port: 9000,
 
-    bootFile: src + 'index.html'
+    bootFile: 'src/client/index.html'
 };
 
 module.exports = config;
