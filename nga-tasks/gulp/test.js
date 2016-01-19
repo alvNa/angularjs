@@ -1,7 +1,7 @@
 'use strict';
 
-var gulp = require('gulp');
-var gulpUtil = require('gulp-util');
+//var gulp = require('gulp');
+//var gulpUtil = require('gulp-util');
 var Server = require('karma').Server;
 var listedInHelp = false;
 

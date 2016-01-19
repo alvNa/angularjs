@@ -1,10 +1,10 @@
 'use strict';
 
-var gulp = require('gulp');
+//var gulp = require('gulp');
 var stripDebug = require('gulp-strip-debug'); // only as an example
 var del = require('del');
 var vinylPaths = require('vinyl-paths');
-var gulpUtil = require("gulp-util");
+var gulpUtil = require('gulp-util');
 
 module.exports = function(gulp, config) {
 

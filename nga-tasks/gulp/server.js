@@ -1,6 +1,6 @@
 'use strict';
 
-var gulp = require('gulp');
+//var gulp = require('gulp');
 var docco = require('gulp-docco');
 var browserSync = require('browser-sync');
 var server = require('gulp-express');
@@ -18,10 +18,9 @@ module.exports = function(gulp, config) {
 
   gulp.task('server-run', listedInHelp, function() {
     server.run([config.serverDir + '/app.js']);
- 
-    // Restart the server when file changes 
+    // Restart the server when file changes
     gulp.watch([config.src + '/**/*.js'], browserSync.reload);
-    gulp.watch([config.serverDir + '/**/*.js'],[server.run]);
+    gulp.watch([config.serverDir + '/**/*.js'], [server.run]);
   });
 
   gulp.task('server-stop', listedInHelp, function() {
