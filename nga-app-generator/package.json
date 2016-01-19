@@ -4,8 +4,7 @@
     "version": "0.1.0",
     "homepage": "https://github.com/AlvaroNav/slush-nga-app-generator",
     "author": {
-        "name": "alvNa",
-        "email": "alvaro.nav@gmail.com"
+        "name": "alvNa"
     },
     "repository": {
         "type": "git",

@@ -19,12 +19,19 @@ module.exports = function(config) {
       'bower_components/angular/angular.js',
       'bower_components/moment/moment.js',
       'bower_components/angular-ui-router/release/angular-ui-router.js',
+      'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+      'bower_components/jquery/dist/jquery.js',
+      'bower_components/bootstrap/dist/js/bootstrap.js',
+      'bower_components/angular-animate/angular-animate.js',
+      'bower_components/angular-resource/angular-resource.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
 
       // inject:js
-      'src/js/core/module.js',
-      'src/js/core/services/date-service.js',
+      'src/js/core/nga.module.js',
+      'src/js/core/services/date.service.js',
+      'src/js/core/controllers/main.controller.js',
+      'src/js/core/nga.config.js',
       // endinject
 
       // our app
