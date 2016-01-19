@@ -4,24 +4,19 @@ var gulp = require('gulp');
 var docco = require('gulp-docco');
 var browserSync = require('browser-sync');
 var server = require('gulp-express');
-var taskListing = require('gulp-task-listing')();
+var listedInHelp = false;
 
 module.exports = function(gulp, config) {
 
-  /**
-   * List the available gulp tasks
-   */
-  gulp.task('help', taskListing);
-
   // Generate documentation pages and save into `docs` directory.
-  gulp.task('docs', function() {
+  gulp.task('docs', listedInHelp, function() {
     return gulp.src([config.src + '/js/**/*.js'])
       // Docco generated files will be saved in the `docs` directory multiple files
       .pipe(docco())
       .pipe(gulp.dest(config.buildDir + 'docs'));
   });
 
-  gulp.task('server-run', function() {
+  gulp.task('server-run', listedInHelp, function() {
     server.run([config.serverDir + '/app.js']);
  
     // Restart the server when file changes 
@@ -29,7 +24,7 @@ module.exports = function(gulp, config) {
     gulp.watch([config.serverDir + '/**/*.js'],[server.run]);
   });
 
-  gulp.task('server-stop', function() {
+  gulp.task('server-stop', listedInHelp, function() {
     // Stop the server
     browserSync.exit();
   });

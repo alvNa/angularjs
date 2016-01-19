@@ -8,7 +8,7 @@ var gulpUtil = require("gulp-util");
 
 module.exports = function(gulp, config) {
 
-  gulp.task('clean', function() {
+  gulp.task('clean', false, function() {
 
     if (config.buildDir) {
 

@@ -10,11 +10,12 @@ var docco = require('gulp-docco');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var templateCache = require('gulp-templatecache');
+var listedInHelp = false;
 
 module.exports = function(gulp, config) {
 
   // Injecting the compiled files into the template
-  gulp.task('inject-src', function() {
+  gulp.task('inject-src', listedInHelp, function() {
 
     gulpUtil.log('Inject bower dependencies and angularjs module files in order into the index.html');
 
@@ -31,7 +32,7 @@ module.exports = function(gulp, config) {
   });
 
   // Injecting the compiled files into the template
-  gulp.task('inject-test', function() {
+  gulp.task('inject-test', listedInHelp, function() {
 
     gulpUtil.log('Inject bower dependencies and angularjs module files in order into karma.conf');
 
@@ -52,14 +53,14 @@ module.exports = function(gulp, config) {
   });
 
   // Generate documentation pages and save into `docs` directory.
-  gulp.task('docs', function() {
+  gulp.task('docs', listedInHelp, function() {
     return gulp.src([config.src + 'js/**/*.js'])
       // Docco generated files will be saved in the `docs` directory multiple files
       .pipe(docco())
       .pipe(gulp.dest(config.buildDir + 'docs'));
   });
 
-  gulp.task('ng-template-cache', function() {
+  gulp.task('ng-template-cache', listedInHelp, function() {
     return gulp.src(config.src + 'html/**/*.html')
       .pipe(templateCache({
         output: config.dist + '/'+ config.appName +'-templates.min.js',
@@ -76,7 +77,7 @@ module.exports = function(gulp, config) {
       .pipe(gulp.dest('./'));
   });
 
-  gulp.task('uglify-js', function() {
+  gulp.task('uglify-js', listedInHelp, function() {
     return gulp.src(config.src + 'js/**/*.js')
       .pipe(angularFilesort())
       // This will output the non-minified version
