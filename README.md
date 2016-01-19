@@ -1,5 +1,5 @@
 # nga-tasks - Gulp tasks for nga
-===========
+========
 Node tasks implemented with gulp task runner. For locally insted of install the nodejs artifact in a repository (like Nexus), go to the directory and write 
 
 - npm link
@@ -13,7 +13,7 @@ Examples of some angular core services and componets. The intention is to show h
 
 
 # nga-app-generator - Node generator with slush (based in gulp)
-===================
+========
 http://slushjs.github.io/generators/
 http://thejackalofjavascript.com/building-slush-generator/
 
