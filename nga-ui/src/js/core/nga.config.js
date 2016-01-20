@@ -3,10 +3,14 @@
   angular.module('nga.core')
     .config(config);
 
-  config.$inject = ['$stateProvider', '$urlRouterProvider'];
+  config.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider'];
 
   /* @ngInject */
-  function config($stateProvider, $urlRouterProvider) {
+  function config($stateProvider, $urlRouterProvider, $httpProvider) {
+
+    $httpProvider.interceptors.push('requestInterceptor');
+    $httpProvider.interceptors.push('responseInterceptor');
+    
     /*
     $stateProvider
     .state('home', {

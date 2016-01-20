@@ -13,6 +13,7 @@ var config = {
     srcDir: __dirname + '/' + src,
     server: 'src/server',
     serverDir: __dirname + '/src/server',
+    test: 'src/client/test/',
 
     debug: 'debug',
     release: 'release',
