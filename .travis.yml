@@ -24,7 +24,8 @@ script:
 
   - cd ../my-app
   - npm link nga-tasks
-  - npm install  
+  - npm install 
+  - bower link nga-ui
   - bower install
   - gulp test
 
