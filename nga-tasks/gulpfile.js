@@ -14,7 +14,7 @@ module.exports = function(gulp, config) {
 
   //Main tasks
   gulp.task('test', 'Executes unit tests with karma',
-    ['inject-test', 'karma-run']);
+    ['inject-test', 'karma-single-run']);
   gulp.task('ci', 'Continuous integration, hint code and test.',
     ['jshint', 'jscs', 'htmlhint', 'inject-test', 'karma-single-run']);
   gulp.task('serve', 'Inject dependencies in the bootstrap file and run a local server',
