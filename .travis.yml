@@ -1,0 +1,33 @@
+language: node_js
+node_js:
+  - "0.10"
+
+branches:
+  only:
+    - master
+
+before_install:
+  - npm install bower -g
+  - npm install gulp -g
+
+script:
+  - cd nga-tasks  
+  - npm install
+  - npm link
+
+  - cd ../nga-ui
+  - npm link nga-tasks
+  - npm install
+  - bower install
+  - gulp dist
+
+  - cd ../my-app
+  - npm link nga-tasks
+  - npm install  
+  - bower install
+  - gulp test
+
+cache:
+  directories:
+  - bower_components
+  - node_modules
