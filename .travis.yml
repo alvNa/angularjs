@@ -20,6 +20,7 @@ script:
   - npm install
   - bower install
   - gulp dist
+  - bower link
 
   - cd ../my-app
   - npm link nga-tasks
