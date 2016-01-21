@@ -24,6 +24,7 @@
     "tests"
   ],
   "dependencies": {
+    "nga-ui": "~1.0.0-SNAPSHOT"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.8"
