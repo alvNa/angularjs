@@ -24,7 +24,7 @@ var config = {
     modulePrefix: 'my-app',
     port: 9000,
 
-    bootFile: 'src/client/index.html'
+    bootFile: src + 'index.html'
 };
 
 module.exports = config;

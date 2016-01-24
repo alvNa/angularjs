@@ -18,6 +18,7 @@ module.exports = function(gulp, config) {
   gulp.task('inject-src', listedInHelp, function() {
     gulpUtil.log('Inject bower dependencies and angularjs module files in order' +
       ' into the index.html');
+
     gulp.src(config.bootFile)
       .pipe(wiredep({
         dependencies: true
@@ -27,7 +28,7 @@ module.exports = function(gulp, config) {
           ignorePath: config.src,
           addRootSlash: false
         }))
-      .pipe(gulp.dest(config.src));
+      .pipe(gulp.dest(config.baseDir + '/' + config.src));
   });
 
   // Injecting the compiled files into the template

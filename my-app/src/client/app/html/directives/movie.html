@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2 class="panel-title">
+          {{vm.movie.index}}. {{vm.movie.title}}
+          <div class="label label-success pull-right">{{vm.movie.score}}</div>
+        </h2>
+    </div>
+    <div class="panel-body">
+        <div ng-repeat="act in vm.movie.actors">
+            <actor name="act.name" surname="act.surname"></actor>
+        </div>
+    </div>
+</div>

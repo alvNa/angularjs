@@ -22,6 +22,10 @@
         url: 'contacts',
         templateUrl: 'html/contacts.html'
       })
+      .state('home.movies', {
+        url: 'movies',
+        templateUrl: 'html/movies.html'
+      })
       .state('home.about', {
         url: 'about',
         templateUrl: 'html/about.html'
