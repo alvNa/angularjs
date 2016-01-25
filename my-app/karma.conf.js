@@ -1,3 +1,4 @@
+'use strict';
 // Karma configuration
 // Generated on Fri Jan 01 2016 22:31:20 GMT+0100 (CET)
 
@@ -122,5 +123,5 @@ module.exports = function(config) {
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: false
-  })
-}
+  });
+};

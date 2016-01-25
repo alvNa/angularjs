@@ -11,16 +11,7 @@
       restrict: 'E',
       templateUrl: 'html/directives/movie.html',
       controller: function() {
-        var vm = this;
-        /*vm.index = '1';
-        vm.score = '7.5';
-        vm.actors = [{
-          name: 'Samuel',
-          surname: 'L. Jackson'
-        }, {
-          name: 'Harvey',
-          surname: 'Keitel'
-        }];*/
+        //var vm = this;
       },
       scope: {},
       controllerAs: 'vm',

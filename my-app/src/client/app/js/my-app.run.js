@@ -6,7 +6,7 @@
   run.$inject = ['$state'];
 
   /* @ngInject */
-  function run($state) {
+  function run(/*$state*/) {
     //$state.transitionTo('home');  
   }
 

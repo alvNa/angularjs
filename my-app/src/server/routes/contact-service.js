@@ -1,5 +1,6 @@
 'use strict';
 var _ = require('lodash');
+var URI = require('../constants.js');
 
 module.exports = function(app) {
 
@@ -11,7 +12,7 @@ module.exports = function(app) {
       res.json(contacts);
     });
 
-  app.route('/api/contacts/:id')
+  app.route(URI.CONTACT)
     .get(function(req, res) {
       if (req.params.id < 0) {
         res.statusCode = 404;

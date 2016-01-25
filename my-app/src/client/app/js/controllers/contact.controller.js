@@ -11,9 +11,6 @@
     /* jshint validthis: true */
     var vm = this;
 
-    vm.date;
-    vm.contacts;
-    vm.items;
     vm.getDate = getDate;
     vm.findContacts= findContacts;
     vm.findItems= findItems;

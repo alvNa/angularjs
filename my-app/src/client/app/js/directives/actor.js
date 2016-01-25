@@ -18,8 +18,6 @@
         name: '=',
         surname: '='
       }
-      //transclude: true
-      //replace: true
     };
   }
 

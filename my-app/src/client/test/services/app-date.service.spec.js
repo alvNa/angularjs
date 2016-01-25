@@ -4,10 +4,6 @@
   describe('DateService Tests', function() {
     var $scope;
     var appDateService;
-    var contacts = [{
-      id: 1,
-      desc: 'contact1'
-    }];
 
     beforeEach(module('myApp'));
 
