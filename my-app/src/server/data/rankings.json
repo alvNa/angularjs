@@ -1,0 +1,75 @@
+[{
+    "id": 1,
+    "title": "My Tarantino movies",
+    "movies": [{
+        "index": 1,
+        "title": "The hateful eight",
+        "score": 7.5,
+        "actors": [{
+            "name": "Samuel",
+            "surname": "L. Jackson"
+        }, {
+            "name": "Tim",
+            "surname": "Roth"
+        }]
+    }, {
+        "index": 2,
+        "title": "Inglorious bastards",
+        "score": 7.2,
+        "actors": [{
+            "name": "Brad",
+            "surname": "Pitt"
+        }, {
+            "name": "Christoph",
+            "surname": "Waltz"
+        }]
+    }, {
+        "index": 3,
+        "title": "Pulp fiction",
+        "score": 7.1,
+        "actors": [{
+            "name": "Samuel",
+            "surname": "L. Jackson"
+        }, {
+            "name": "Harvey",
+            "surname": "Keitel"
+        }]
+    }]
+}, {
+    "id": 2,
+    "title": "My action movies",
+    "movies": [{
+        "index": 1,
+        "title": "Die hard with a vengance",
+        "score": 8.3,
+        "actors": [{
+            "name": "Bruce",
+            "surname": "Willis"
+        }, {
+            "name": "Samuel",
+            "surname": "L. Jackson"
+        }]
+    }, {
+        "index": 2,
+        "title": "Total recall",
+        "score": 8.1,
+        "actors": [{
+            "name": "Arnold",
+            "surname": "Schwarzenegger"
+        }, {
+            "name": "Michael",
+            "surname": "Ironside"
+        }]
+    }, {
+        "index": 3,
+        "title": "Predator",
+        "score": 7.9,
+        "actors": [{
+            "name": "Arnold",
+            "surname": "Schwarzenegger"
+        }, {
+            "name": "Carl",
+            "surname": "Weathers"
+        }]
+    }]
+}]

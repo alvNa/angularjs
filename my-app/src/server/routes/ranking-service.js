@@ -1,24 +1,29 @@
 'use strict';
 var _ = require('lodash');
+var URI = require('../constants.js');
 
 module.exports = function(app) {
 
-  var contacts = require('../data/contacts.json');
+  var rankings = require('../data/rankings.json');
 
-  app.route('/api/contacts')
-    //Find contacts
+  app.route('/api/rankings')
+    //Find items
     .get(function(req, res) {
-      res.json(contacts);
+      res.json(rankings);
     });
 
-  app.route('/api/contacts/:id')
+  app.route(URI.RANKING)
     .get(function(req, res) {
+      console.log(req.params.id);
+      console.log(rankings);
+
       if (req.params.id < 0) {
         res.statusCode = 404;
         res.send('Error 404: No contact found');
       } else {
-        res.json(_.find(contacts, function(contact) {
-          return contact.id.toString() === req.params.id;
+        res.json(_.find(rankings, function(ranking) {
+          console.log(ranking);
+          return ranking.id.toString() === req.params.id;
         }));
       }
     })
@@ -27,8 +32,8 @@ module.exports = function(app) {
         res.statusCode = 404;
         res.send('Error 404: No order found');
       } else {
-        _.find(contacts, function(contact) {
-          return contact.id.toString() === req.params.id;
+        _.find(rankings, function(ranking) {
+          return ranking.id.toString() === req.params.id;
         }) = req.body;
 
         res.status(200).end();
@@ -39,8 +44,8 @@ module.exports = function(app) {
         res.statusCode = 404;
         res.send('Error 404: No order found');
       } else {
-        _.remove(contacts, function(contact) {
-          return contact.id.toString() === req.params.id;
+        _.remove(rankings, function(ranking) {
+          return ranking.id.toString() === req.params.id;
         });
 
         res.status(200).end();

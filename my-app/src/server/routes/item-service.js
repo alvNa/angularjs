@@ -2,19 +2,9 @@
 var _ = require('lodash');
 var URI = require('../constants.js');
 
-console.log(URI);
 module.exports = function(app) {
 
-  var items = [{
-    id: 1,
-    name: 'Coca-cola'
-  }, {
-    id: 2,
-    name: 'Pepsi-cola'
-  }, {
-    id: 3,
-    name: 'Aquarius'
-  }];
+  var items = require('../data/items.json');
 
   app.route('/api/items')
     //Find items

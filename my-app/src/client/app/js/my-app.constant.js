@@ -11,6 +11,7 @@
     .constant('URI', {
       CONTACT: prefix + 'contacts/:id',
       CONTACT_LIST: prefix + 'contacts',
-      ITEM: prefix + 'items/:id'
+      ITEM: prefix + 'items/:id',
+      RANKING: prefix + 'rankings/:id'
     });
 })();

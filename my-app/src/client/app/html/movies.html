@@ -1,4 +1,17 @@
 <!DOCTYPE HTML>
-<div ng-controller="MovieController as vm">
+<div class="col-md-12" ng-controller="MovieController as vm">
+
+  <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      Rankings
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+      <li ng-repeat="id in vm.ids" ng-click="vm.selectRanking(id)">
+        <a>Ranking {{id}}</a>
+      </li>
+    </ul>
+  </div>
+
   <ranking ranking="vm.ranking"></ranking>
 </div>
