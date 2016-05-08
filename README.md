@@ -24,7 +24,7 @@ To create the generator using slush you have to install slush
 
 and write this commands to scafold a new slush project
 
-- slush slush generator
+- slush generator
 
 and fill the properties asked. For testing it locally
 
